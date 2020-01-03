@@ -1,0 +1,58 @@
+/**index.wxss**/
+
+.ad01-img {
+  width: 100%;
+}
+
+/**快捷菜单**/
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.menu-item {
+  width: 25%;
+  padding: 5px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.menu-img {
+  width: 66%;
+  align-self: center;
+}
+
+.menu-mc {
+  font-size: 14px;
+  align-self: center;
+}
+
+/**最新消息**/
+.xinxi {
+  display: flex; 
+  align-items: center;
+  padding: 5px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.xinxi-icon {
+  width: 69px;
+  height: 22px; 
+}
+
+.xinxi-text {   
+  flex-grow: 1; 
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; 
+  margin-top: -25px;
+}
+
+.xinxi-arrow {
+  width: 94px;
+  height: 19px;
+}

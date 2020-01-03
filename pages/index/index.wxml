@@ -1,0 +1,81 @@
+<!--index.wxml-->
+<view class="ad01">
+  <image mode="widthFix" class="ad01-img" src="{{img1}}"></image>
+</view>
+
+<view class="ad01">
+  <image mode="widthFix" class="ad01-img" src="{{img2}}"></image>
+</view>
+
+<swiper indicator-dots="{{swiperimg.indicatorDots}}" vertical="{{swiperimg.vertical}}" autoplay="{{swiperimg.autoplay}}" interval="{{swiperimg.interval}}" duration="{{swiperimg.duration}}">
+  <block wx:for="{{swiperimg.tupian}}" wx:key="id">
+    <swiper-item>
+      <navigator url="../logs/logs">
+        <image src="{{item}}" class="ad01-img"></image>
+      </navigator>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!--快捷菜单-->
+<view class="menu">
+
+  <navigator url="../logs/logs" class="menu-item">
+    <image src="../../images/btn/icon-link5.png" mode="widthFix" class="menu-img"></image>
+    <text class="menu-mc">品牌大全</text>
+  </navigator>
+
+  <navigator url="../logs/logs" class="menu-item">
+    <image src="../../images/btn/icon-link6.png" mode="widthFix" class="menu-img"></image>
+    <text class="menu-mc">全新上架</text>
+  </navigator>
+
+  <navigator url="../logs/logs" class="menu-item">
+    <image src="../../images/btn/icon-link7.png" mode="widthFix" class="menu-img"></image>
+    <text class="menu-mc">用户中心</text>
+  </navigator>
+
+  <navigator url="../logs/logs" class="menu-item">
+    <image src="../../images/btn/icon-link8.png" mode="widthFix" class="menu-img"></image>
+    <text class="menu-mc">订单列表</text>
+  </navigator>
+
+  <navigator url="../logs/logs" class="menu-item">
+    <image src="../../images/btn/icon-link4.png" mode="widthFix" class="menu-img"></image>
+    <text class="menu-mc">留言反馈</text>
+  </navigator>
+
+  <navigator url="../logs/logs" class="menu-item">
+    <image src="../../images/btn/icon-link3.png" mode="widthFix" class="menu-img"></image>
+    <text class="menu-mc">活动列表</text>
+  </navigator>
+
+  <navigator url="../logs/logs" class="menu-item">
+    <image src="../../images/btn/icon-link2.png" mode="widthFix" class="menu-img"></image>
+    <text class="menu-mc">帮助中心</text>
+  </navigator>
+
+  <navigator url="../logs/logs" class="menu-item">
+    <image src="../../images/btn/icon-link1.png" mode="widthFix" class="menu-img"></image>
+    <text class="menu-mc">关于我们</text>
+  </navigator>
+
+</view>
+
+<block>
+  <navigator url="../logs/logs" class="xinxi">
+    <image class="xinxi-icon" src="../../images/btn/news-icon.png"></image>
+    <text class="xinxi-text">
+{{newtime}}  最新消息内容关于小程序消息，欢迎大家关注小程序的进度我们会不断更新小程序的新内容，也希望得到你的宝贵意见。
+</text>
+    <image class="xinxi-arrow" src="../../images/btn/icon-more.png"></image>
+  </navigator>
+
+  <navigator url="../logs/logs" class="xinxi">
+    <image class="xinxi-icon" src="../../images/btn/news-icon.png"></image>
+    <text class="xinxi-text">
+{{newtime}} 最新消息内容关于小程序消息，欢迎大家关注小程序的进度我们会不断更新小程序的新内容，也希望得到你的宝贵意见。
+</text>
+    <image class="xinxi-arrow" src="../../images/btn/icon-more.png"></image>
+  </navigator>
+</block>

@@ -90,64 +90,199 @@
 <!--最新上架-->
 <view class="zuixin">
 
-<navigator url="../logs/logs" class="zuixin-item">
-  <image src="../../images/upload/jingxuan2.jpg" mode="widthFix" class="zuixin-img"></image>
-  <text class="zuixin-mc">产品名称1</text>
-  <view>
-    <text class="zuixin-jiage0">￥</text>
-    <text class="zuixin-jiage1">166.00</text>
-    <text class="zuixin-jiage2">536人付款</text>
-  </view>
-</navigator>
+  <navigator url="../logs/logs" class="zuixin-item">
+    <image src="../../images/upload/jingxuan2.jpg" mode="widthFix" class="zuixin-img"></image>
+    <text class="zuixin-mc">产品名称1</text>
+    <view>
+      <text class="zuixin-jiage0">￥</text>
+      <text class="zuixin-jiage1">166.00</text>
+      <text class="zuixin-jiage2">536人付款</text>
+    </view>
+  </navigator>
 
-<navigator url="../logs/logs" class="zuixin-item">
-  <image src="../../images/upload/jingxuan3.jpg" mode="widthFix" class="zuixin-img"></image>
-  <text class="zuixin-mc">产品名称2</text>
-  <view>
-    <text class="zuixin-jiage0">￥</text>
-    <text class="zuixin-jiage1">166.00</text>
-    <text class="zuixin-jiage2">536人付款</text>
-  </view>
-</navigator>
+  <navigator url="../logs/logs" class="zuixin-item">
+    <image src="../../images/upload/jingxuan3.jpg" mode="widthFix" class="zuixin-img"></image>
+    <text class="zuixin-mc">产品名称2</text>
+    <view>
+      <text class="zuixin-jiage0">￥</text>
+      <text class="zuixin-jiage1">166.00</text>
+      <text class="zuixin-jiage2">536人付款</text>
+    </view>
+  </navigator>
 
-<navigator url="../logs/logs" class="zuixin-item">
-  <image src="../../images/upload/jingxuan14.jpg" mode="widthFix" class="zuixin-img"></image>
-  <text class="zuixin-mc">产品名称3</text>
-  <view>
-    <text class="zuixin-jiage0">￥</text>
-    <text class="zuixin-jiage1">166.00</text>
-    <text class="zuixin-jiage2">536人付款</text>
-  </view>
-</navigator>
+  <navigator url="../logs/logs" class="zuixin-item">
+    <image src="../../images/upload/jingxuan14.jpg" mode="widthFix" class="zuixin-img"></image>
+    <text class="zuixin-mc">产品名称3</text>
+    <view>
+      <text class="zuixin-jiage0">￥</text>
+      <text class="zuixin-jiage1">166.00</text>
+      <text class="zuixin-jiage2">536人付款</text>
+    </view>
+  </navigator>
 
-<navigator url="../logs/logs" class="zuixin-item">
-  <image src="../../images/upload/jingxuan13.jpg" mode="widthFix" class="zuixin-img"></image>
-  <text class="zuixin-mc">产品名称4</text>
-  <view>
-    <text class="zuixin-jiage0">￥</text>
-    <text class="zuixin-jiage1">166.00</text>
-    <text class="zuixin-jiage2">536人付款</text>
-  </view>
-</navigator>
+  <navigator url="../logs/logs" class="zuixin-item">
+    <image src="../../images/upload/jingxuan13.jpg" mode="widthFix" class="zuixin-img"></image>
+    <text class="zuixin-mc">产品名称4</text>
+    <view>
+      <text class="zuixin-jiage0">￥</text>
+      <text class="zuixin-jiage1">166.00</text>
+      <text class="zuixin-jiage2">536人付款</text>
+    </view>
+  </navigator>
 
-<navigator url="../logs/logs" class="zuixin-item">
-  <image src="../../images/upload/jingxuan12.jpg" mode="widthFix" class="zuixin-img"></image>
-  <text class="zuixin-mc">产品名称5</text>
-  <view>
-    <text class="zuixin-jiage0">￥</text>
-    <text class="zuixin-jiage1">166.00</text>
-    <text class="zuixin-jiage2">536人付款</text>
-  </view>
-</navigator>
+  <navigator url="../logs/logs" class="zuixin-item">
+    <image src="../../images/upload/jingxuan12.jpg" mode="widthFix" class="zuixin-img"></image>
+    <text class="zuixin-mc">产品名称5</text>
+    <view>
+      <text class="zuixin-jiage0">￥</text>
+      <text class="zuixin-jiage1">166.00</text>
+      <text class="zuixin-jiage2">536人付款</text>
+    </view>
+  </navigator>
 
-<navigator url="../logs/logs" class="zuixin-item">
-  <image src="../../images/upload/jingxuan11.jpg" mode="widthFix" class="zuixin-img"></image>
-  <text class="zuixin-mc">产品名称6</text>
-  <view>
-    <text class="zuixin-jiage0">￥</text>
-    <text class="zuixin-jiage1">166.00</text>
-    <text class="zuixin-jiage2">536人付款</text>
-  </view>
-</navigator>
+  <navigator url="../logs/logs" class="zuixin-item">
+    <image src="../../images/upload/jingxuan11.jpg" mode="widthFix" class="zuixin-img"></image>
+    <text class="zuixin-mc">产品名称6</text>
+    <view>
+      <text class="zuixin-jiage0">￥</text>
+      <text class="zuixin-jiage1">166.00</text>
+      <text class="zuixin-jiage2">536人付款</text>
+    </view>
+  </navigator>
 
 </view>
+
+<!--销售排行-->
+<view class="qukuai">
+  <view class="y01"></view>
+  <text class="t01">销售排行</text>
+  <view class="m01">更多></view>
+</view>
+
+<navigator url="../logs/logs" class="paihang-item">
+  <view class="paihang-tupian">
+    <image class="paihang-img" src="../../images/upload/jingxuan18.jpg" mode="widthFix"></image>
+  </view>
+  <view class="paihang-xinxi">
+    <text class="paihang-mingcheng">产品名称</text>
+    <text class="paihang-jianjie">产品简介</text>
+    <view>
+      <text class="paihang-xuhao">No.1</text>
+      <text class="paihang-xiaoshou">| 663人付款 |</text>
+      <text class="paihang-jiage0">￥</text>
+      <text class="paihang-jiage1">998.00</text>
+    </view>
+  </view>
+</navigator>
+
+<navigator url="../logs/logs" class="paihang-item">
+  <view class="paihang-tupian">
+    <image class="paihang-img" src="../../images/upload/jingxuan18.jpg" mode="widthFix"></image>
+  </view>
+  <view class="paihang-xinxi">
+    <text class="paihang-mingcheng">产品名称</text>
+    <text class="paihang-jianjie">产品简介</text>
+    <view>
+      <text class="paihang-xuhao">No.1</text>
+      <text class="paihang-xiaoshou">| 663人付款 |</text>
+      <text class="paihang-jiage0">￥</text>
+      <text class="paihang-jiage1">998.00</text>
+    </view>
+  </view>
+</navigator>
+
+<navigator url="../logs/logs" class="paihang-item">
+  <view class="paihang-tupian">
+    <image class="paihang-img" src="../../images/upload/jingxuan6.jpg" mode="widthFix"></image>
+  </view>
+  <view class="paihang-xinxi">
+    <text class="paihang-mingcheng">产品名称</text>
+    <text class="paihang-jianjie">产品简介</text>
+    <view>
+      <text class="paihang-xuhao">No.2</text>
+      <text class="paihang-xiaoshou">| 663人付款 |</text>
+      <text class="paihang-jiage0">￥</text>
+      <text class="paihang-jiage1">998.00</text>
+    </view>
+  </view>
+</navigator>
+
+<navigator url="../logs/logs" class="paihang-item">
+  <view class="paihang-tupian">
+    <image class="paihang-img" src="../../images/upload/jingxuan12.jpg" mode="widthFix"></image>
+  </view>
+  <view class="paihang-xinxi">
+    <text class="paihang-mingcheng">产品名称</text>
+    <text class="paihang-jianjie">产品简介</text>
+    <view>
+      <text class="paihang-xuhao">No.3</text>
+      <text class="paihang-xiaoshou">| 663人付款 |</text>
+      <text class="paihang-jiage0">￥</text>
+      <text class="paihang-jiage1">998.00</text>
+    </view>
+  </view>
+</navigator>
+
+<navigator url="../logs/logs" class="paihang-item">
+  <view class="paihang-tupian">
+    <image class="paihang-img" src="../../images/upload/jingxuan14.jpg" mode="widthFix"></image>
+  </view>
+  <view class="paihang-xinxi">
+    <text class="paihang-mingcheng">产品名称</text>
+    <text class="paihang-jianjie">产品简介</text>
+    <view>
+      <text class="paihang-xuhao">No.4</text>
+      <text class="paihang-xiaoshou">| 663人付款 |</text>
+      <text class="paihang-jiage0">￥</text>
+      <text class="paihang-jiage1">998.00</text>
+    </view>
+  </view>
+</navigator>
+
+<navigator url="../logs/logs" class="paihang-item">
+  <view class="paihang-tupian">
+    <image class="paihang-img" src="../../images/upload/jingxuan5.jpg" mode="widthFix"></image>
+  </view>
+  <view class="paihang-xinxi">
+    <text class="paihang-mingcheng">产品名称</text>
+    <text class="paihang-jianjie">产品简介</text>
+    <view>
+      <text class="paihang-xuhao">No.5</text>
+      <text class="paihang-xiaoshou">| 663人付款 |</text>
+      <text class="paihang-jiage0">￥</text>
+      <text class="paihang-jiage1">998.00</text>
+    </view>
+  </view>
+</navigator>
+
+<navigator url="../logs/logs" class="paihang-item">
+  <view class="paihang-tupian">
+    <image class="paihang-img" src="../../images/upload/jingxuan17.jpg" mode="widthFix"></image>
+  </view>
+  <view class="paihang-xinxi">
+    <text class="paihang-mingcheng">产品名称</text>
+    <text class="paihang-jianjie">产品简介</text>
+    <view>
+      <text class="paihang-xuhao">No.6</text>
+      <text class="paihang-xiaoshou">| 663人付款 |</text>
+      <text class="paihang-jiage0">￥</text>
+      <text class="paihang-jiage1">998.00</text>
+    </view>
+  </view>
+</navigator>
+
+<navigator url="../logs/logs" class="paihang-item">
+  <view class="paihang-tupian">
+    <image class="paihang-img" src="../../images/upload/jingxuan16.jpg" mode="widthFix"></image>
+  </view>
+  <view class="paihang-xinxi">
+    <text class="paihang-mingcheng">产品名称</text>
+    <text class="paihang-jianjie">产品简介</text>
+    <view>
+      <text class="paihang-xuhao">No.7</text>
+      <text class="paihang-xiaoshou">| 663人付款 |</text>
+      <text class="paihang-jiage0">￥</text>
+      <text class="paihang-jiage1">998.00</text>
+    </view>
+  </view>
+</navigator>

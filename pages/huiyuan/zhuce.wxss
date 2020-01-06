@@ -36,12 +36,12 @@ page{
   margin: 0 -12px;
   padding: 0 12px;
   height: 46px;
-  line-height: 46px;  
+  line-height: 46px;
 }
 
 .label{
   color: #999;
-  width: 4.5em;
+  width: 5.5em;
 }
 
 .account-info-input {
@@ -54,9 +54,4 @@ page{
   width: 100%; 
   margin-bottom: 5px;
 }
-
-.wx{
-  width: 100%; 
-  background-color: red;
-  color: white;
-}
+ 

@@ -79,3 +79,75 @@
     <image class="xinxi-arrow" src="../../images/btn/icon-more.png"></image>
   </navigator>
 </block>
+
+<!--区块标题-->
+<view class="qukuai">
+  <view class="y01"></view>
+  <text class="t01">最新上架产品</text>
+  <view class="m01">更多></view>
+</view>
+
+<!--最新上架-->
+<view class="zuixin">
+
+<navigator url="../logs/logs" class="zuixin-item">
+  <image src="../../images/upload/jingxuan2.jpg" mode="widthFix" class="zuixin-img"></image>
+  <text class="zuixin-mc">产品名称1</text>
+  <view>
+    <text class="zuixin-jiage0">￥</text>
+    <text class="zuixin-jiage1">166.00</text>
+    <text class="zuixin-jiage2">536人付款</text>
+  </view>
+</navigator>
+
+<navigator url="../logs/logs" class="zuixin-item">
+  <image src="../../images/upload/jingxuan3.jpg" mode="widthFix" class="zuixin-img"></image>
+  <text class="zuixin-mc">产品名称2</text>
+  <view>
+    <text class="zuixin-jiage0">￥</text>
+    <text class="zuixin-jiage1">166.00</text>
+    <text class="zuixin-jiage2">536人付款</text>
+  </view>
+</navigator>
+
+<navigator url="../logs/logs" class="zuixin-item">
+  <image src="../../images/upload/jingxuan14.jpg" mode="widthFix" class="zuixin-img"></image>
+  <text class="zuixin-mc">产品名称3</text>
+  <view>
+    <text class="zuixin-jiage0">￥</text>
+    <text class="zuixin-jiage1">166.00</text>
+    <text class="zuixin-jiage2">536人付款</text>
+  </view>
+</navigator>
+
+<navigator url="../logs/logs" class="zuixin-item">
+  <image src="../../images/upload/jingxuan13.jpg" mode="widthFix" class="zuixin-img"></image>
+  <text class="zuixin-mc">产品名称4</text>
+  <view>
+    <text class="zuixin-jiage0">￥</text>
+    <text class="zuixin-jiage1">166.00</text>
+    <text class="zuixin-jiage2">536人付款</text>
+  </view>
+</navigator>
+
+<navigator url="../logs/logs" class="zuixin-item">
+  <image src="../../images/upload/jingxuan12.jpg" mode="widthFix" class="zuixin-img"></image>
+  <text class="zuixin-mc">产品名称5</text>
+  <view>
+    <text class="zuixin-jiage0">￥</text>
+    <text class="zuixin-jiage1">166.00</text>
+    <text class="zuixin-jiage2">536人付款</text>
+  </view>
+</navigator>
+
+<navigator url="../logs/logs" class="zuixin-item">
+  <image src="../../images/upload/jingxuan11.jpg" mode="widthFix" class="zuixin-img"></image>
+  <text class="zuixin-mc">产品名称6</text>
+  <view>
+    <text class="zuixin-jiage0">￥</text>
+    <text class="zuixin-jiage1">166.00</text>
+    <text class="zuixin-jiage2">536人付款</text>
+  </view>
+</navigator>
+
+</view>

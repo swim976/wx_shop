@@ -1,1 +1,28 @@
 <!--分类-->
+<view class="wrap">
+	<!-- 左侧导航 -->
+	<view class="navLeft">
+		<block wx:for="{{categoryData}}" wx:key="id">
+			 <text catchtap="onAside" data-index="{{index}}" class="">{{item.title}}</text>
+		</block>
+	</view>
+	<!-- 右侧内容 -->
+	<view class="navRight">
+		<block wx:for="{{categoryData}}" wx:key="id">
+			<view class="navRight-main-item" >
+				<block wx:for="{{item.list}}" wx:for-item="subitem" wx:key="id">
+					<view class="navRight-main-item-list">
+						<block wx:for="{{subitem.subList}}" wx:for-item="descitem" wx:key="id">
+							<navigator bindtap="pud" data-img="{{descitem.descUrl}}" data-text="{{descitem.descTitlt}}">
+								  <!-- <view> -->
+									<image src="{{descitem.descUrl}}"></image>
+									<text>{{descitem.descTitlt}}</text>
+								<!-- </view> -->
+							</navigator>
+						</block>
+					</view>
+				</block>
+			</view>
+		</block>
+	</view>
+</view>

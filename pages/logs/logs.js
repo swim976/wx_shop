@@ -3,6 +3,39 @@ const util = require('../../utils/util.js')
 
 var page = undefined;
 Page({
+  yonghu:function(){
+    wx.getUserInfo({
+      success:function(res){
+        console.log(res.userInfo.nickName) 
+      }
+    })
+  },
+  yh:function(e){
+    console.log(e.detail.userInfo)
+  },
+  myopenid:function(){
+    wx.login({
+      success(res){
+        console.log(res.code)
+
+        wx.request({
+          url: "",//"https://api.weixin.qq.com/sns/jscode2session",
+          data:{
+            appid:"wx53ab2cb3a767b813",
+            secret:"5fe67c4dcc0701a6ffb2f2a04217b077",
+            js_code:res.code,
+            grant_type:"authorization_code"
+          },
+          method:"GET",
+          success:function(res){
+            console.log(res.data)
+          }
+        })
+
+      }
+    })
+  },
+
   onLoad: function () {
     page = this;
   },

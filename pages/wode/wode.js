@@ -5,7 +5,7 @@ var app = getApp()
 Page({
   data: {
     userInfo: {
-      nickname: '老用户',
+      nickname: '用户名',
       sex: 0,
       cover_thumb: 'http://img.zhichiwangluo.com/zc_app_default_photo.png'
     },

@@ -1,4 +1,7 @@
 <!--logs.wxml-->
+ 
+ 
+
 <view class="doommview">
     <block wx:for="{{doommData}}" wx:key="id">
         <text wx:if="{{item.display}}" class="aon" style="animation: first {{item.time}}s linear forwards;top:{{item.top}}%;color:{{item.color}};">
@@ -11,4 +14,3 @@
     <button bindtap="bindbt">一时点/click</button>
     <button bindtap="bindbt">me/一时弹</button>
 </view>
-  

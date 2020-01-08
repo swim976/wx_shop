@@ -1,66 +1,81 @@
 // pages/wode/wode.js
+
+var app = getApp()
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    userInfo: {
+      nickname: '老用户',
+      sex: 0,
+      cover_thumb: 'http://img.zhichiwangluo.com/zc_app_default_photo.png'
+    },
+    genderArr: ['男', '女'],
+    isFromBack: false,
+    phone: '13251469962'
   },
+  onLoad: function () {
+    // var userInfo = app.getUserInfo(),
+    //   phone = userInfo.phone,
+    //   data = {
+    //     'userInfo.nickname': userInfo.nickname,
+    //     'userInfo.sex': userInfo.sex,
+    //     'userInfo.cover_thumb': userInfo.cover_thumb
+    //   };
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+    // if (phone) {
+    //   data.phone = phone;
+    // }
+    // this.setData(data);
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
   onShow: function () {
-
+    // if (this.data.isFromBack) {
+    //   var phone = app.getUserInfo().phone;
+    //   if (phone) {
+    //     this.setData({
+    //       phone: phone
+    //     })
+    //   }
+    // } else {
+    //   this.setData({
+    //     isFromBack: true
+    //   });
+    // }
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  choosePhoto: function () {
+    // var that = this;
+    // app.chooseImage(function (imgUrl) {
+    //   that.setData({
+    //     'userInfo.cover_thumb': imgUrl
+    //   })
+    // });
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  changeGender: function (e) {
+    // this.setData({
+    //   'userInfo.sex': e.detail.value
+    // })
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+  inputNickname: function (e) {
+    // this.setData({
+    //   'userInfo.nickname': e.detail.value
+    // })
   },
+  saveUserInfo: function () {
+    // var data = this.data.userInfo;
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
+    // app.sendRequest({
+    //   url: '/index.php?r=AppData/saveUserInfo',
+    //   method: 'post',
+    //   data: data,
+    //   success: function (res) {
+    //     if (res.status === 0) {
+    //       app.setUserInfoStorage(data);
+    //       app.turnBack();
+    //     }
+    //   }
+    // });
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  bindCellphonePage: function () {
+    // app.turnToPage('/pages/bindCellphone/bindCellphone');
   }
+
 })

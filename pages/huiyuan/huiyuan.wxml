@@ -19,9 +19,9 @@
     </view>
 
     <text class="shuoming">请准确填写账号信息，有问题联系客服</text>
-    <button class="mysubmit" type="primary">登陆</button>
+    <navigator url="/pages/logs/logs"><button class="mysubmit" type="primary">登陆</button></navigator> 
     <navigator url="zhuce"><button class="mysubmit" type="primary">注册新用户</button></navigator>
-    <button open-type="getUserInfo" bindgetuserinfo="" class="wx">微信登录</button>
+    <navigator url="/pages/logs/logs"><button open-type="getUserInfo" bindgetuserinfo="" class="wx">微信登录</button></navigator>
   </view>
 
 </form>

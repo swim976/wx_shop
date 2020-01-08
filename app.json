@@ -31,12 +31,6 @@
         "selectedIconPath": "blueberry/tag_yellow.png"
       },
       {
-        "pagePath": "pages/gouwuche/gouwuche",
-        "text": "购物车",
-        "iconPath": "blueberry/shopping_cart_empty.png",
-        "selectedIconPath": "blueberry/shopping_cart.png"
-      },
-      {
         "pagePath": "pages/huiyuan/huiyuan",
         "text": "会员",
         "iconPath": "blueberry/star_3.png",
@@ -44,7 +38,7 @@
       },
       {
         "pagePath": "pages/wode/wode",
-        "text": "关于我们",
+        "text": "我的",
         "iconPath": "blueberry/lamp_inactive.png",
         "selectedIconPath": "blueberry/lamp_active.png"
       }

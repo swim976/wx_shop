@@ -3,7 +3,7 @@
 	<!-- 左侧导航 -->
 	<view class="navLeft">
 		<block wx:for="{{categoryData}}" wx:key="id">
-			 <text catchtap="onAside" data-index="{{index}}" class="">{{item.title}}</text>
+			 <text data-index="{{index}}" class="">{{item.title}}</text>
 		</block>
 	</view>
 	<!-- 右侧内容 -->
@@ -13,7 +13,7 @@
 				<block wx:for="{{item.list}}" wx:for-item="subitem" wx:key="id">
 					<view class="navRight-main-item-list">
 						<block wx:for="{{subitem.subList}}" wx:for-item="descitem" wx:key="id">
-							<navigator bindtap="pud" data-img="{{descitem.descUrl}}" data-text="{{descitem.descTitlt}}">
+							<navigator url="/pages/logs/logs"   data-img="{{descitem.descUrl}}" data-text="{{descitem.descTitlt}}">
 								  <!-- <view> -->
 									<image src="{{descitem.descUrl}}"></image>
 									<text>{{descitem.descTitlt}}</text>

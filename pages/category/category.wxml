@@ -1,0 +1,91 @@
+<!--pages/category/category.wxml-->
+	<!-- <view class="hotgoods-item" catch:tap="goToGoods">
+		<image class="hotgoods-image" src="/images/upload/jingxuan16.jpg" mode="widthFix" style="width: 90%"></image>
+		<view class="hotgoods-name">
+			<text>爽肤洁面奶</text>
+		</view>
+		<view class="hotgoods-price">
+			<text>￥3.5</text>
+		</view>
+	</view> -->
+<import src="/templates/goodsItem/goodsItem.wxml" />
+<view class="category">
+	<van-tabs swipeable animated>
+	    <van-tab title="品牌大全">
+	    	<van-row>
+			  	<van-col span="7" class="col">
+			  		<view class="left-row row">
+			  			<view class="left-tab {{active===0 ? 'active' : ''}}" catch:tap="selectSub" data-index="{{0}}">全部</view>
+			  			<!-- <view class="left-tab">热带水果</view>
+			  			<view class="left-tab">时令水果</view>
+			  			<view class="left-tab">柑橘类</view>
+			  			<view class="left-tab">蔷薇科类</view> -->
+			  			<view class="left-tab {{active===item.Id ? 'active' : ''}}" wx:for="{{categorySub}}" wx:key="Id" catch:tap="selectSub" data-index="{{item.Id}}">{{item.Sub}}</view>
+			  		</view>
+			  	</van-col>
+			  	<van-col span="17" class="col">
+			  		<view class="right-row row">
+				  		<scroll-view scroll-y style="height: 100%;">
+				  			<!-- <view wx:for="{{10}}" wx:for-index="index">{{index}}</view> -->
+				  			<van-row gutter="5">
+				  				<van-col span="12" wx:for="{{10}}" wx:key="*this">
+					  				<!-- <view catch:tap="goToGoods"> -->
+					  					<template is="goodsItem" data="{{...goods}}"/>
+					  				<!-- </view>	 -->				
+							    </van-col>
+				  			</van-row>
+				  		</scroll-view>
+				  	</view>
+			  	</van-col>
+			</van-row>
+	    </van-tab>
+	  	<van-tab title="最新上架">
+        <scroll-view scroll-y style="height: 100%;">
+          <!-- <view wx:for="{{10}}" wx:for-index="index">{{index}}</view> -->
+          <van-row gutter="5">
+            <van-col span="12" wx:for="{{10}}" wx:key="*this">
+              <!-- <view catch:tap="goToGoods"> -->
+                <template is="goodsItem" data="{{...goods}}"/>
+              <!-- </view>	 -->				
+            </van-col>
+          </van-row>
+        </scroll-view>
+      </van-tab>
+	  	<van-tab title="活动列表">
+        <scroll-view scroll-y style="height: 100%;">
+          <!-- <view wx:for="{{10}}" wx:for-index="index">{{index}}</view> -->
+          <van-row gutter="5">
+            <van-col span="12" wx:for="{{10}}" wx:key="*this">
+              <!-- <view catch:tap="goToGoods"> -->
+                <template is="goodsItem" data="{{...goods}}"/>
+              <!-- </view>	 -->				
+            </van-col>
+          </van-row>
+        </scroll-view>
+      </van-tab>
+	  	<van-tab title="个人护理">
+        <scroll-view scroll-y style="height: 100%;">
+          <!-- <view wx:for="{{10}}" wx:for-index="index">{{index}}</view> -->
+          <van-row gutter="5">
+            <van-col span="12" wx:for="{{10}}" wx:key="*this">
+              <!-- <view catch:tap="goToGoods"> -->
+                <template is="goodsItem" data="{{...goods}}"/>
+              <!-- </view>	 -->				
+            </van-col>
+          </van-row>
+        </scroll-view>
+      </van-tab>
+	  	<van-tab title="喜欢推荐">
+        <scroll-view scroll-y style="height: 100%;">
+          <!-- <view wx:for="{{10}}" wx:for-index="index">{{index}}</view> -->
+          <van-row gutter="5">
+            <van-col span="12" wx:for="{{10}}" wx:key="*this">
+              <!-- <view catch:tap="goToGoods"> -->
+                <template is="goodsItem" data="{{...goods}}"/>
+              <!-- </view>	 -->				
+            </van-col>
+          </van-row>
+        </scroll-view>
+      </van-tab>
+	</van-tabs>
+</view>

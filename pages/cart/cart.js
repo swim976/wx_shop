@@ -169,5 +169,49 @@ Page({
       },
     })
     this.sumMoney()
+  },
+  /**
+   * 结算
+   */
+  onSubmit(e){
+
+    wx.showToast({
+      title: '结算成功！',//提示文字
+      duration: 2000,//显示时长
+      mask: true,//是否显示透明蒙层，防止触摸穿透，默认：false  
+      icon: 'success', //图标，支持"success"、"loading"  
+      success: function () { 
+        console.log("结算按钮")
+       },//接口调用成功
+      fail: function () { 
+        console.log("结算失败")
+       },  //接口调用失败的回调函数  
+      complete: function () { 
+        console.log("调用回调成功")
+      } //接口调用结束的回调函数  
+    }) 
+
+    // wx.showModal({
+    //   title: '删除图片',
+    //   content: '确定要删除该图片？',
+    //   showCancel: true,//是否显示取消按钮
+    //   cancelText: "否",//默认是“取消”
+    //   cancelColor: 'skyblue',//取消文字的颜色
+    //   confirmText: "是",//默认是“确定”
+    //   confirmColor: 'skyblue',//确定文字的颜色
+    //   success: function (res) {
+    //     if (res.cancel) {
+    //       //点击取消,默认隐藏弹框
+    //     } else {
+    //       //点击确定
+    //       temp.splice(index, 1),
+    //         that.setData({
+    //           tempFilePaths: temp,
+    //         })
+    //     }
+    //   },
+    //   fail: function (res) { },//接口调用失败的回调函数
+    //   complete: function (res) { },//接口调用结束的回调函数（调用成功、失败都会执行）
+    // }) 
   }
 })

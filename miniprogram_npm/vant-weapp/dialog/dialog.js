@@ -8,7 +8,6 @@ const Dialog = options => {
     return new Promise((resolve, reject) => {
         const context = options.context || getContext();
         const dialog = context.selectComponent(options.selector);
-        delete options.context;
         delete options.selector;
         if (dialog) {
             dialog.set(Object.assign({ onCancel: reject, onConfirm: resolve }, options));
@@ -25,8 +24,6 @@ Dialog.defaultOptions = {
     message: '',
     zIndex: 100,
     overlay: true,
-    className: '',
-    customStyle: '',
     asyncClose: false,
     messageAlign: '',
     transition: 'scale',

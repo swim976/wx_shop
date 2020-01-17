@@ -8,12 +8,12 @@ export function observeProps(props) {
             prop = { type: prop };
         }
         let { observer } = prop;
-        prop.observer = function (...args) {
+        prop.observer = function () {
             if (observer) {
                 if (typeof observer === 'string') {
                     observer = this[observer];
                 }
-                observer.apply(this, args);
+                observer.apply(this, arguments);
             }
             this.set();
         };

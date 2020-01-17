@@ -35,3 +35,4 @@ page{
 .detail-image image{
 	display: block;
 }
+ 

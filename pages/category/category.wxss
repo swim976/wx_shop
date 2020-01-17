@@ -1,11 +1,10 @@
 /* pages/category/category.wxss */
 
 /* goodsitem wxss*/
-@import "/templates/goodsItem/goodsItem.wxss"
+@import "/templates/goodsItem/goodsItem.wxss";
 page{
 	background-color: #f2f2f2;
 }
-
 .row{
 	height: calc(100vh - 88rpx);
 }

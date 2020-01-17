@@ -3,10 +3,8 @@ VantComponent({
     field: true,
     classes: ['icon-class'],
     props: {
-        value: Number,
         readonly: Boolean,
         disabled: Boolean,
-        allowHalf: Boolean,
         size: {
             type: Number,
             value: 20
@@ -34,6 +32,10 @@ VantComponent({
         count: {
             type: Number,
             value: 5
+        },
+        value: {
+            type: Number,
+            value: 0
         }
     },
     data: {
@@ -46,22 +48,26 @@ VantComponent({
             }
         }
     },
+    computed: {
+        list() {
+            const { count, innerValue } = this.data;
+            return Array.from({ length: count }, (_, index) => index < innerValue);
+        }
+    },
     methods: {
         onSelect(event) {
             const { data } = this;
-            const { score } = event.currentTarget.dataset;
+            const { index } = event.currentTarget.dataset;
             if (!data.disabled && !data.readonly) {
-                this.set({ innerValue: score + 1 });
-                this.$emit('input', score + 1);
-                this.$emit('change', score + 1);
+                this.set({ innerValue: index + 1 });
+                this.$emit('input', index + 1);
+                this.$emit('change', index + 1);
             }
         },
         onTouchMove(event) {
             const { clientX, clientY } = event.touches[0];
-            this.getRect('.van-rate__icon', true).then((list) => {
-                const target = list
-                    .sort(item => item.right - item.left)
-                    .find(item => clientX >= item.left &&
+            this.getRect('.van-rate__item', true).then(list => {
+                const target = list.find(item => clientX >= item.left &&
                     clientX <= item.right &&
                     clientY >= item.top &&
                     clientY <= item.bottom);

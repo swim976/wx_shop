@@ -24,24 +24,14 @@ VantComponent({
         step: {
             type: null,
             value: 1
-        },
-        showPlus: {
-            type: Boolean,
-            value: true
-        },
-        showMinus: {
-            type: Boolean,
-            value: true
-        },
-        disablePlus: Boolean,
-        disableMinus: Boolean
+        }
     },
     computed: {
         minusDisabled() {
-            return this.data.disabled || this.data.disableMinus || this.data.value <= this.data.min;
+            return this.data.disabled || this.data.value <= this.data.min;
         },
         plusDisabled() {
-            return this.data.disabled || this.data.disablePlus || this.data.value >= this.data.max;
+            return this.data.disabled || this.data.value >= this.data.max;
         }
     },
     watch: {
@@ -50,12 +40,10 @@ VantComponent({
                 return;
             }
             const newValue = this.range(value);
-            if (typeof newValue === 'number' && +this.data.value !== newValue) {
+            if (typeof newValue === 'number' && value !== newValue) {
                 this.set({ value: newValue });
             }
-        },
-        max: 'check',
-        min: 'check',
+        }
     },
     data: {
         focus: false
@@ -66,12 +54,6 @@ VantComponent({
         });
     },
     methods: {
-        check() {
-            const newValue = this.range(this.data.value);
-            if (typeof newValue === 'number' && +this.data.value !== newValue) {
-                this.set({ value: newValue });
-            }
-        },
         onFocus(event) {
             this.$emit('focus', event.detail);
         },
@@ -82,7 +64,6 @@ VantComponent({
         },
         // limit value range
         range(value) {
-            value = String(value).replace(/[^0-9.-]/g, '');
             return Math.max(Math.min(this.data.max, value), this.data.min);
         },
         onInput(event) {
@@ -95,7 +76,7 @@ VantComponent({
                 return;
             }
             const diff = type === 'minus' ? -this.data.step : +this.data.step;
-            const value = Math.round((+this.data.value + diff) * 100) / 100;
+            const value = Math.round((this.data.value + diff) * 100) / 100;
             this.triggerInput(this.range(value));
             this.$emit(type);
         },

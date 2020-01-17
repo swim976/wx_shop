@@ -9,6 +9,7 @@
     "pages/huiyuan/huiyuan",
     "pages/huiyuan/zhuce",
     "pages/wode/wode",
+    "pages/mine/mine",
     "pages/logs/logs",
     "csa/a"
   ],
@@ -51,13 +52,13 @@
         "selectedIconPath": "/images/tab/apps-fill.png"
       },
       {
-        "pagePath": "pages/huiyuan/huiyuan",
+        "pagePath": "pages/cart/cart",
         "text": "购物车",
         "iconPath": "/images/tab/shopping-cart-line.png",
         "selectedIconPath": "/images/tab/shopping-cart-fill.png"
       },
       {
-        "pagePath": "pages/wode/wode",
+        "pagePath": "pages/mine/mine",
         "text": "我的",
         "iconPath": "/images/tab/account-box-line.png",
         "selectedIconPath": "/images/tab/account-box-fill.png"

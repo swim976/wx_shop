@@ -1,6 +1,5 @@
 import { VantComponent } from '../common/component';
 import { touch } from '../mixins/touch';
-import { nextTick } from '../common/utils';
 VantComponent({
     mixins: [touch],
     classes: ['nav-class', 'tab-class', 'tab-active-class', 'line-class'],
@@ -96,7 +95,6 @@ VantComponent({
         });
     },
     destroyed() {
-        // @ts-ignore
         this.createIntersectionObserver().disconnect();
     },
     methods: {
@@ -192,7 +190,7 @@ VantComponent({
                     item.set(data);
                 }
             });
-            nextTick(() => {
+            this.set({}, () => {
                 this.setLine();
                 this.setTrack();
                 this.scrollIntoView();
@@ -273,9 +271,7 @@ VantComponent({
             }
             const { offsetTop } = this.data;
             const { windowHeight } = wx.getSystemInfoSync();
-            // @ts-ignore
             this.createIntersectionObserver().disconnect();
-            // @ts-ignore
             this.createIntersectionObserver()
                 .relativeToViewport({ top: -(this.navHeight + offsetTop) })
                 .observe('.van-tabs', (res) => {
@@ -290,7 +286,6 @@ VantComponent({
                 });
                 this.setPosition(position);
             });
-            // @ts-ignore
             this.createIntersectionObserver()
                 .relativeToViewport({ bottom: -(windowHeight - 1 - offsetTop) })
                 .observe('.van-tabs', (res) => {

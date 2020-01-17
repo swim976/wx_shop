@@ -6,8 +6,6 @@ VantComponent({
         show: Boolean,
         title: String,
         cancelText: String,
-        customStyle: String,
-        overlayStyle: String,
         zIndex: {
             type: Number,
             value: 100

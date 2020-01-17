@@ -1,3 +1,2 @@
-import { VantComponentOptions, CombinedComponentInstance } from '../definitions/index';
-declare function VantComponent<Data, Props, Methods, Computed>(vantOptions?: VantComponentOptions<Data, Props, Methods, Computed, CombinedComponentInstance<Data, Props, Methods, Computed>>): void;
+declare function VantComponent<Data, Props, Watch, Methods, Computed>(vantOptions?: VantComponentOptions<Data, Props, Watch, Methods, Computed, CombinedComponentInstance<Data, Props, Watch, Methods, Computed>>): void;
 export { VantComponent };

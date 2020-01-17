@@ -99,5 +99,18 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  /**
+   * 获取地址
+   */
+  address(){
+    wx.navigateTo({
+      url: '/pages/addressList/addressList',
+    })
+    // wx.chooseAddress({
+    //   success:function(res){
+    //     console.log(res)
+    //   }
+    // }); 
+  }, 
 })

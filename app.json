@@ -8,6 +8,8 @@
     "pages/gouwuche/gouwuche",
     "pages/huiyuan/huiyuan",
     "pages/huiyuan/zhuce",
+    "pages/address/address",
+    "pages/addressList/addressList",
     "pages/wode/wode",
     "pages/mine/mine",
     "pages/logs/logs",

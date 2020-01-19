@@ -1,4 +1,5 @@
-var area = require('../../utils/area.js');
+var area = require('../../utils/area.js'); 
+var addressConf = require('../addressList/addressConf.js')
 var areaInfo = []; //所有省市区县数据
 var provinces = []; //省
 var provinceNames = []; //省名称
@@ -90,7 +91,7 @@ Page({
       citys: citys,
       cityNames: cityNames
     })
-    console.log('cityNames:' + cityNames);
+    // console.log('cityNames:' + cityNames);
     that.getCountyInfo(count, 0);
   },
 
@@ -116,7 +117,7 @@ Page({
         name: ''
       };
     }
-    console.log('countyNames:' + countyNames);
+    // console.log('countyNames:' + countyNames);
     var that = this;
     // value = [column0, column1, 0];
 
@@ -128,7 +129,7 @@ Page({
   },
 
   bindTransportDayChange: function (e) {
-    console.log('picker country 发生选择改变，携带值为', e.detail.value);
+    // console.log('picker country 发生选择改变，携带值为', e.detail.value);
     this.setData({
       transportIndex: e.detail.value
     })
@@ -136,7 +137,7 @@ Page({
 
   bindProvinceNameChange: function (e) {
     var that = this;
-    console.log('picker province 发生选择改变，携带值为', e.detail.value);
+    // console.log('picker province 发生选择改变，携带值为', e.detail.value);
     var val = e.detail.value
     that.getCityArr(val); //获取地级市数据
     that.getCountyInfo(val, 0); //获取区县数据
@@ -153,7 +154,7 @@ Page({
 
   bindCityNameChange: function (e) {
     var that = this;
-    console.log('picker city 发生选择改变，携带值为', e.detail.value);
+    // console.log('picker city 发生选择改变，携带值为', e.detail.value);
 
     var val = e.detail.value
     that.getCountyInfo(value[0], val); //获取区县数据
@@ -167,7 +168,7 @@ Page({
 
   bindCountyNameChange: function (e) {
     var that = this;
-    console.log('picker county 发生选择改变，携带值为', e.detail.value);
+    // console.log('picker county 发生选择改变，携带值为', e.detail.value);
     this.setData({
       countyIndex: e.detail.value
     })
@@ -182,10 +183,10 @@ Page({
     var countyName = e.detail.value.countyName;
     var address = e.detail.value.address;
 
-    console.log(transportDay + "," + provinceName + "," + cityName + "," + countyName + "," + address); //输出该文本 
+    // console.log(transportDay + "," + provinceName + "," + cityName + "," + countyName + "," + address); //输出该文本 
 
     var arr = wx.getStorageSync('addressList') || [];
-    console.log("arr,{}", arr);
+    // console.log("arr,{}", arr);
     addressList = {
       consignee: consignee,
       mobile: mobile,
@@ -194,8 +195,36 @@ Page({
     }
     arr.push(addressList);
     wx.setStorageSync('addressList', arr);
-    wx.navigateBack({
+    let addr = arr[arr.length - 1];
+    console.log(addr)
+    let name = addr.consignee;
+    let phone = addr.mobile;
+    let receiving = addr.transportDay;
+    let address11 = addr.address;
+    let get_str = "?name=" + name + "&phone=" + phone + "&receiving=" + receiving + "&address=" + address11;
+    console.log(addressConf.default.addressIP + get_str)
+    wx.request({
+      url: addressConf.default.addressIP,
+      data: {
+        name:name,
+        phone: phone,
+        receiving: receiving,
+        address: address11
+      },
+      method:"POST",
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      success: function(res){
+        console.log("请求成功！！！")
+      },
+      fail: function(e){
+        console.log("地址请求失败！！！")
+      }
+ 
+    }) 
+    // wx.navigateBack({
 
-    })
+    // })
   }
 })

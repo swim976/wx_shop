@@ -15,13 +15,12 @@ page{
 	text-align: center;
 	font-size: 28rpx;
 }
-
-
 .userinfo {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20rpx;
+  background: #ffffff;
 }
 .userinfo-avatar {
   width: 128rpx;
@@ -29,9 +28,8 @@ page{
   margin: 20rpx;
   border-radius: 50%;
   background-color: #fff;
-  border: 5rpx solid #e5017d;
+  border: 5rpx solid #80efec;
 }
-
 .userinfo-nickname {
   color: #aaa;
   font-size: 32rpx;

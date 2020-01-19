@@ -1,4 +1,5 @@
 // pages/addressList/addressList.js
+var addressConf = require('addressConf.js')
 Page({
 
   /**
@@ -12,7 +13,7 @@ Page({
    */
   onLoad: function (options) {
     var arr = wx.getStorageSync('addressList') || [];
-    console.info("缓存数据：" + arr);
+    // console.info("缓存数据：" + arr);
     // 更新数据  
     this.setData({
       addressList: arr

@@ -7,7 +7,7 @@
   <image mode="widthFix" class="ad01-img" src="{{img2}}"></image>
 </view>
 
-<swiper indicator-dots="{{swiperimg.indicatorDots}}" vertical="{{swiperimg.vertical}}" autoplay="{{swiperimg.autoplay}}" interval="{{swiperimg.interval}}" duration="{{swiperimg.duration}}">
+<swiper indicator-dots="{{swiperimg.indicatorDots}}" vertical="{{swiperimg.vertical}}" autoplay="{{swiperimg.autoplay}}" interval="{{swiperimg.interval}}" duration="{{swiperimg.duration}}" >
   <block wx:for="{{swiperimg.tupian}}" wx:key="id">
     <swiper-item>
       <navigator url="../logs/logs">

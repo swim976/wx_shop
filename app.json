@@ -6,6 +6,7 @@
     "pages/goods/goods",
     "pages/cart/cart",
     "pages/gouwuche/gouwuche",
+    "pages/order-list/order-list",
     "pages/huiyuan/huiyuan",
     "pages/huiyuan/zhuce",
     "pages/address/address",

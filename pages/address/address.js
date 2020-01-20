@@ -1,4 +1,4 @@
-var area = require('../../utils/area.js'); 
+var area = require('../../utils/area.js');
 var addressConf = require('../addressList/addressConf.js')
 var areaInfo = []; //所有省市区县数据
 var provinces = []; //省
@@ -26,23 +26,23 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
     var that = this;
-    area.getAreaInfo(function (arr) {
+    area.getAreaInfo(function(arr) {
       areaInfo = arr;
       //获取省份数据
       that.getProvinceData();
     });
   },
   // 获取省份数据
-  getProvinceData: function () {
+  getProvinceData: function() {
     var that = this;
     var s;
     provinces = [];
@@ -65,7 +65,7 @@ Page({
   },
 
   // 获取城市数据
-  getCityArr: function (count = 0) {
+  getCityArr: function(count = 0) {
     var c;
     citys = [];
     cityNames = [];
@@ -96,7 +96,7 @@ Page({
   },
 
   // 获取区县数据
-  getCountyInfo: function (column0 = 0, column1 = 0) {
+  getCountyInfo: function(column0 = 0, column1 = 0) {
     var c;
     countys = [];
     countyNames = [];
@@ -128,14 +128,14 @@ Page({
     })
   },
 
-  bindTransportDayChange: function (e) {
+  bindTransportDayChange: function(e) {
     // console.log('picker country 发生选择改变，携带值为', e.detail.value);
     this.setData({
       transportIndex: e.detail.value
     })
   },
 
-  bindProvinceNameChange: function (e) {
+  bindProvinceNameChange: function(e) {
     var that = this;
     // console.log('picker province 发生选择改变，携带值为', e.detail.value);
     var val = e.detail.value
@@ -152,7 +152,7 @@ Page({
 
   },
 
-  bindCityNameChange: function (e) {
+  bindCityNameChange: function(e) {
     var that = this;
     // console.log('picker city 发生选择改变，携带值为', e.detail.value);
 
@@ -166,7 +166,7 @@ Page({
     })
   },
 
-  bindCountyNameChange: function (e) {
+  bindCountyNameChange: function(e) {
     var that = this;
     // console.log('picker county 发生选择改变，携带值为', e.detail.value);
     this.setData({
@@ -174,7 +174,7 @@ Page({
     })
   },
 
-  saveAddress: function (e) {
+  saveAddress: function(e) {
     var consignee = e.detail.value.consignee;
     var mobile = e.detail.value.mobile;
     var transportDay = e.detail.value.transportDay;
@@ -206,23 +206,37 @@ Page({
     wx.request({
       url: addressConf.default.addressIP,
       data: {
-        name:name,
+        name: name,
         phone: phone,
         receiving: receiving,
         address: address11
       },
-      method:"POST",
+      method: "POST",
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
-      success: function(res){
+      success: function(res) {
         console.log("请求成功！！！")
+        wx.showToast({
+          title: '添加地址成功',
+          duration: 2000,
+          mask: true,
+          icon: 'success',
+          success: function() {
+            
+          },
+          complete: function () {
+            wx.navigateBack({
+
+            })
+          }
+        })
       },
-      fail: function(e){
-        console.log("地址请求失败！！！")
+      fail: function(e) {
+        // console.log("地址请求失败！！！")
       }
- 
-    }) 
+
+    })
     // wx.navigateBack({
 
     // })

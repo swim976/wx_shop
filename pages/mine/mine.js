@@ -113,4 +113,10 @@ Page({
     //   }
     // }); 
   }, 
+  toOrder(){
+    console.log("订单")
+    wx.navigateTo({
+      url: '/pages/order-list/order-list',
+    })
+  }
 })

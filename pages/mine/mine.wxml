@@ -14,7 +14,7 @@
 
 
 	<view class="mine-row">
-		<van-cell title="我的订单" is-link icon="orders-o"/>
+		<van-cell bind:click="toOrder" title="我的订单" is-link icon="orders-o"/>
 		<view class="mine-menu">
 			<view class="menu-item">
 				<van-icon name="refund-o" size="26px"/>

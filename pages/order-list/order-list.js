@@ -7,7 +7,7 @@ Page({
 		statusType: ["待付款", "待发货", "待收货", "待评价", "已完成"],
 		currentType: 0,
 		tabClass: ["", "", "", "", ""],
-		bodyHeight: null,
+		bodyHeight: "100%",
 		isHidden: true,
 		token: null,
 		orderList: []

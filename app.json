@@ -13,8 +13,7 @@
     "pages/addressList/addressList",
     "pages/wode/wode",
     "pages/mine/mine",
-    "pages/logs/logs",
-    "csa/a"
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
